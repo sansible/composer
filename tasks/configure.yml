@@ -1,0 +1,16 @@
+---
+
+- name: Create composer config folder
+  become: yes
+  become_user: "{{ composer.user }}"
+  file:
+    name: ~/.composer
+    state: directory
+
+- name: Create composer github auth
+  become: yes
+  become_user: "{{ composer.user }}"
+  template:
+    src: auth.json.j2
+    dest: ~/.composer/auth.json
+  when: composer.auth is defined and composer.auth | count > 0

@@ -1,0 +1,17 @@
+---
+
+composer:
+  user: ~
+  install_dir: ~
+  # You can define github and http auth using `auth` dict.
+  #
+  # github oauth
+  # github:
+  #   github.com: <key>
+  #
+  # http auth
+  # http:
+  #   repo.example.org:
+  #     username: <username>
+  #     password: <password>
+  auth: { }
